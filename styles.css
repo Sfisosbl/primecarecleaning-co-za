@@ -492,9 +492,11 @@ h3 {
 
 .equipment-track {
   display: flex;
+  gap: clamp(14px, 2vw, 26px);
   width: max-content;
-  padding-left: 100vw;
-  animation: equipmentScroll 28s linear infinite;
+  padding-left: 0;
+  will-change: transform;
+  animation: equipmentScroll 22s linear infinite;
 }
 
 .equipment-rail:hover .equipment-track {
@@ -505,7 +507,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: clamp(14px, 2vw, 26px);
-  padding-right: clamp(14px, 2vw, 26px);
+  min-width: max-content;
 }
 
 .tool-chip {
@@ -582,7 +584,7 @@ h3 {
   }
 
   to {
-    transform: translateX(calc(-100% - 100vw));
+    transform: translateX(calc(-50% - clamp(7px, 1vw, 13px)));
   }
 }
 
